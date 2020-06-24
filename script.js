@@ -1,8 +1,17 @@
 function initPage() {
 
     const inputEl = document.getElementById("cityInput");
-    /*const inputEl = $("#cityInput");*/
-
+    /*const inputEl = $("#cityInput");
+    const searchEl = $("#search-button");
+    const searchEl = $("#clear-history");
+    const searchEl = $("#cityName");
+    const searchEl = $("#current-pic");
+    const searchEl = $("#temperature");
+    const searchEl = $("#humidity");
+    const searchEl = $("#WindSpeed");
+    const searchEl = $("#UVIndex");
+    const searchEl = $("#history");
+    const searchEl = $("#history");*/
     const searchEl = document.getElementById("search-button");
 
     const clearEl = document.getElementById("clear-history");
