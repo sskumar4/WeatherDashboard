@@ -9,32 +9,31 @@
 # Title: Weather Dashboard
 
 # Introduction:   
-Create a timed quiz app using JavaScript that stores high scores. Code quiz consists of multiple-choice questions with color change and sound feature for right and wrong answer. The app will run in the browser and feature dynamically updated HTML and CSS powered by JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+Create weather dashboard using the OpenWeather API and local storage to display weather data for cities.
 
 # Technologies: 
-HTML, CSS, Javascript
+HTML, CSS, bootstrap jQuery, api (openweather, axios)
 
 # Features
 Created the following 
-html files: 
-  * index.html, highscores.html game.html, end.html 
-js files: 
-  * highscores.js, end.js, game.js
-css files
-  * game.css, highscores.css, style.css
+html file: 
+  * index.html
+js file: 
+  * script.js
+css file:
+  * styles.css
 
 Developed the site with the following features:
-  * User is presented with a start quiz button to begin the quiz
-  * A timer starts with total 75 secs in the top right of the app and immediately the user is presented with a question
-  * When one question is answered, the user is presented with another question (Upto seven questions)
-  * A "Right" or "Wrong" message is displayed below the nmultiple choice questions when a user selects an answer
-  * When the answer is correct, a sound is heard and the button color turns green 
-  * When the answer is incorrect, a sound is heard and the button color turns red. Also 10 seconds is subtracted from
-    the timer for each incorrect answer
-  * The quiz ends When all questions are answered or the timer reaches 0 
-  * When the quiz is over, the user can save their initials and the time score
-  * The user can start a new quiz by clicking "Go Back" button
-
+  * User is presented with form input to search the weather conditions for a city 
+  * The user is presented with current and future conditions for the city of user's choice and that city is added to the search history which is displayed below the input form
+  * In the Current Local Weather conditions section, the user is presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+  * The UV index is color coded that indicates whether the conditions are favorable, moderate, or severe
+  * The 5-day forecast section displays the future weather conditions for that city  with date, an icon representation of weather conditions, the temperature, and the humidity
+  * When the user clicks on a city in the search history, the user is again presented with the  current and future conditions for that city
+  * If the user opens the weather dashboard application again, the user is presented with the last searched city forecast
+  * The Clear history button clears the search history
+  
+  
 Used HTML validation service to ensure that each page has valid HTML.
 
 # Launch
