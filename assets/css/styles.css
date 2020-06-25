@@ -1,5 +1,6 @@
+/*style for container*/
+
 .container-md {
-    /* max-width: none; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,9 +15,15 @@
     font-weight: bold;
 }
 
+
+/*style for cityName class*/
+
 .cityName {
     font-size: 25px;
 }
+
+
+/*style for forecase date*/
 
 .forecast-date {
     font-size: 18px;
@@ -30,6 +37,9 @@
 #weather {
     background-color: bisque;
 }
+
+
+/*style for horizontal rule*/
 
 #hori {
     background-color: black;

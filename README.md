@@ -12,7 +12,7 @@
 Create weather dashboard using the OpenWeather API and local storage to display weather data for cities.
 
 # Technologies: 
-HTML, CSS, bootstrap jQuery, api (openweather, axios)
+HTML, CSS, bootstrap javascript, axios, api (openweathermap)
 
 # Features
 Created the following 

@@ -1,17 +1,9 @@
 function initPage() {
 
+    // Initialze variables
+
     const inputEl = document.getElementById("cityInput");
-    /*const inputEl = $("#cityInput");
-    const searchEl = $("#search-button");
-    const searchEl = $("#clear-history");
-    const searchEl = $("#cityName");
-    const searchEl = $("#current-pic");
-    const searchEl = $("#temperature");
-    const searchEl = $("#humidity");
-    const searchEl = $("#WindSpeed");
-    const searchEl = $("#UVIndex");
-    const searchEl = $("#history");
-    const searchEl = $("#history");*/
+
     const searchEl = document.getElementById("search-button");
 
     const clearEl = document.getElementById("clear-history");
@@ -33,21 +25,15 @@ function initPage() {
 
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
-    console.log(searchHistory);
+    //Openweathermap API key
 
-
-
-
-
-    const APIKey = "c9a9ed03a355403f4cb9a36e931c0b4a";
+    const APIKey = "fb95eea909ba35cdae25cddea228fe32";
 
     //  When search button is clicked, read the city name typed by the user
-
-
-
+    // function to get weather details of the city
     function getWeather(cityName) {
 
-        //  Using saved city name, execute a current condition get request from open weather map api
+        //  Use saved city name, execute a current condition get request from open weather map api
 
         let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
 
@@ -59,7 +45,7 @@ function initPage() {
 
             //  Parse response to display current conditions
 
-            //  Method for using "date" objects obtained from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+            //  Method for using "date" objects from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
             const currentDate = new Date(response.data.dt * 1000);
 
@@ -94,10 +80,9 @@ function initPage() {
             axios.get(UVQueryURL)
 
             .then(function(response) {
-
+                //Create the UV index element
                 let UVIndex = document.createElement("span");
-
-                //UVIndex.setAttribute("class", "badge badge-success");
+                //Choose the correct background color based on the UV value
                 let uv_value = Math.round(response.data[0].value);
                 if (uv_value > 0 && uv_value <= 2) {
                     UVIndex.setAttribute("style", "background-color:green");
@@ -121,7 +106,7 @@ function initPage() {
 
             });
 
-            //  Using saved city name, execute a 5-day forecast get request from open weather map api
+            //  Use saved city name, execute a 5-day forecast get request from open weather map api
 
             let cityID = response.data.id;
 
@@ -190,7 +175,7 @@ function initPage() {
 
     }
 
-
+    //Adding eventlistener for search button click
 
     searchEl.addEventListener("click", function() {
 
@@ -207,7 +192,7 @@ function initPage() {
     })
 
 
-
+    // Clears the search history
     clearEl.addEventListener("click", function() {
 
         searchHistory = [];
@@ -225,7 +210,7 @@ function initPage() {
     }
 
 
-
+    // function to display the search history
     function renderSearchHistory() {
 
         historyEl.innerHTML = "";
@@ -257,7 +242,7 @@ function initPage() {
     }
 
 
-
+    // Call search history function
     renderSearchHistory();
 
     if (searchHistory.length > 0) {
