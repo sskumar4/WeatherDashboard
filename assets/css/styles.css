@@ -1,4 +1,4 @@
-.container {
+.container-md {
     /* max-width: none; */
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@
 }
 
 .cityName {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .forecast-date {
@@ -25,4 +25,12 @@
 .today {
     font-weight: bold;
     padding-top: 10px;
+}
+
+#weather {
+    background-color: bisque;
+}
+
+#hori {
+    background-color: black;
 }
