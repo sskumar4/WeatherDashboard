@@ -1,5 +1,8 @@
 .container {
     /* max-width: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-brand {
@@ -17,4 +20,9 @@
 
 .forecast-date {
     font-size: 18px;
+}
+
+.today {
+    font-weight: bold;
+    padding-top: 10px;
 }

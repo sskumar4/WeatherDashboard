@@ -164,6 +164,8 @@ function initPage() {
 
                     forecastWeatherEl.setAttribute("src", "https://openweathermap.org/img/wn/" + response.data.list[forecastIndex].weather[0].icon + "@2x.png");
 
+                    forecastWeatherEl.setAttribute("style", "text-align: center");
+
                     forecastWeatherEl.setAttribute("alt", response.data.list[forecastIndex].weather[0].description);
 
                     forecastEls[i].append(forecastWeatherEl);
