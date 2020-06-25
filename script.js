@@ -37,19 +37,16 @@ function initPage() {
 
         let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
 
+        //Axios call and response
         axios.get(queryURL)
 
         .then(function(response) {
-
-            console.log(response);
 
             //  Parse response to display current conditions
 
             //  Method for using "date" objects from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
             const currentDate = new Date(response.data.dt * 1000);
-
-            console.log(currentDate);
 
             const day = currentDate.getDate();
 
@@ -77,6 +74,7 @@ function initPage() {
 
             let UVQueryURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey + "&cnt=1";
 
+            //Axios call and response
             axios.get(UVQueryURL)
 
             .then(function(response) {
@@ -112,6 +110,7 @@ function initPage() {
 
             let forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&appid=" + APIKey;
 
+            //Axios call and response
             axios.get(forecastQueryURL)
 
             .then(function(response) {
