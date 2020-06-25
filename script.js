@@ -154,7 +154,7 @@ function initPage() {
                     const forecastDateEl = document.createElement("p");
 
                     forecastDateEl.setAttribute("class", "mt-3 mb-0 forecast-date");
-                    forecastDateEl.setAttribute("style", "background-color: black");
+                    forecastDateEl.setAttribute("style", "background-color: black; text-align: center");
 
                     forecastDateEl.innerHTML = forecastMonth + "/" + forecastDay + "/" + forecastYear;
 
