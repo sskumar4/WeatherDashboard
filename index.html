@@ -21,12 +21,14 @@
 </head>
 
 <body>
-
+    <!--Heading/Navbar-->
     <nav class="navbar navbar-dark bg-dark">
 
         <span class="navbar-brand mb-0 h1 w-100 h-200 text-center">Weather Dashboard</span>
 
     </nav>
+
+    <!-- Container for the app-->
 
     <div class="container-md m-5">
 
@@ -41,7 +43,7 @@
                     <input id="cityInput" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
 
                     <div class="input-group-append">
-
+                        <!--Button for search-->
                         <button class="btn btn-primary" type="button" id="search-button">
 
                             <i class="fas fa-search"></i>
@@ -51,13 +53,13 @@
                     </div>
 
                 </div>
-
+                <!--Button for clear history-->
                 <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
 
                 <form id="history"></form>
 
             </div>
-
+            <!-- Container for displaying -->
             <div class="col-md-9">
 
                 <div class="row mr-0">
@@ -68,7 +70,7 @@
 
                             <div class="col-md-12">
 
-                                <p style="font-weight: bold; font-size: 30px; padding-top: 10px;">Today's Weather Report</p>
+                                <p style="font-weight: bold; font-size: 30px; padding-top: 10px;">Today's Local Weather Report</p>
                                 <hr id="hori" />
                                 <span id="cityName" class="cityName align-middle" style="font-weight: bold;"></span>
 
@@ -126,7 +128,7 @@
 
                     <div class="col-md-12">
 
-                        <h3 class="mb-3 mt-1" style="margin-left: 1em">5-Day Forecast</h3>
+                        <h3 class="mb-3 mt-1" style="font-weight: bold; font-size: 30px;">5-Day Forecast</h3>
 
                     </div>
 
@@ -134,15 +136,15 @@
 
                 <div class="row mx-2">
 
-                    <div class="col-md-2 forecast bg-primary text-white ml-2 mb-3 rounded"></div>
+                    <div class="col-md-2 forecast bg-primary text-white ml-1 mb-3 rounded"></div>
 
-                    <div class="col-md-2 forecast bg-primary text-white ml-2 mb-3 rounded"></div>
+                    <div class="col-md-2 forecast bg-primary text-white ml-1 mb-3 rounded"></div>
 
-                    <div class="col-md-2 forecast bg-primary text-white ml-2 mb-3 rounded"></div>
+                    <div class="col-md-2 forecast bg-primary text-white ml-1 mb-3 rounded"></div>
 
-                    <div class="col-md-2 forecast bg-primary text-white ml-2 mb-3 rounded"></div>
+                    <div class="col-md-2 forecast bg-primary text-white ml-1 mb-3 rounded"></div>
 
-                    <div class="col-md-2 forecast bg-primary text-white ml-2 mb-3 rounded"></div>
+                    <div class="col-md-2 forecast bg-primary text-white ml-1 mb-3 rounded"></div>
 
                 </div>
 
