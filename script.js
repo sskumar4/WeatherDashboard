@@ -25,6 +25,8 @@ function initPage() {
 
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
+    let searchedCity = '';
+
     //Openweathermap API key
 
     const APIKey = "fb95eea909ba35cdae25cddea228fe32";
@@ -167,9 +169,17 @@ function initPage() {
                     forecastEls[i].append(forecastHumidityEl);
 
                 }
+                //Only in success path, add searched city to searchHistory
+                searchHistory.push(searchedCity);
 
+                localStorage.setItem("search", JSON.stringify(searchHistory));
+
+                renderSearchHistory();
             })
 
+        }).catch(function(err) {
+
+            alert('City not found, please enter correct city name')
         });
 
     }
@@ -180,13 +190,11 @@ function initPage() {
 
         const searchTerm = inputEl.value;
 
+        searchedCity = searchTerm;
+
         getWeather(searchTerm);
 
-        searchHistory.push(searchTerm);
 
-        localStorage.setItem("search", JSON.stringify(searchHistory));
-
-        renderSearchHistory();
 
     })
 
