@@ -85,15 +85,15 @@ function initPage() {
                 //Choose the correct background color based on the UV value
                 let uv_value = Math.round(response.data[0].value);
                 if (uv_value > 0 && uv_value <= 2) {
-                    UVIndex.setAttribute("style", "background-color:green");
+                    UVIndex.setAttribute("style", "cplor:white; background-color:green");
                 } else if (uv_value >= 3 && uv_value <= 5) {
-                    UVIndex.setAttribute("style", "background-color:yellow");
+                    UVIndex.setAttribute("style", "color:white; background-color:yellow");
                 } else if (uv_value >= 6 && uv_value <= 7) {
-                    UVIndex.setAttribute("style", "background-color:orange");
+                    UVIndex.setAttribute("style", "color:white; background-color:orange");
                 } else if (uv_value >= 8 && uv_value <= 10) {
-                    UVIndex.setAttribute("style", "background-color:red");
+                    UVIndex.setAttribute("style", "color:white; background-color:red");
                 } else if (uv_value >= 11) {
-                    UVIndex.setAttribute("style", "background-color:indigo");
+                    UVIndex.setAttribute("style", "color:white;background-color:indigo");
                 }
 
 
