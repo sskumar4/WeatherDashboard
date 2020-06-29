@@ -169,12 +169,7 @@ function initPage() {
                     forecastEls[i].append(forecastHumidityEl);
 
                 }
-                //Only in success path, add searched city to searchHistory
-                searchHistory.push(searchedCity);
 
-                localStorage.setItem("search", JSON.stringify(searchHistory));
-
-                renderSearchHistory();
             })
 
         }).catch(function(err) {
@@ -193,7 +188,12 @@ function initPage() {
         searchedCity = searchTerm;
 
         getWeather(searchTerm);
+        //Only in success path, add searched city to searchHistory
+        searchHistory.push(searchedCity);
 
+        localStorage.setItem("search", JSON.stringify(searchHistory));
+
+        renderSearchHistory();
 
 
     })
